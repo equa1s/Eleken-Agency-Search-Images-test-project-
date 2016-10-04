@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.imagesearcher.controllers.GoogleSearchController;
@@ -36,6 +38,7 @@ public class ImageListActivity extends BaseActionBarActivity implements GoogleSe
     private static final String TAG = ImageListActivity.class.getSimpleName();
 
     @BindView(R.id.recycler_view) public RecyclerView mRecyclerView;
+    @BindView(R.id.progress_bar) public ProgressBar mProgressBar;
 
     private int rowsCount;
 
@@ -104,6 +107,8 @@ public class ImageListActivity extends BaseActionBarActivity implements GoogleSe
         List<String> handled = handleResponse(items);
         ImageGridAdapter imageGridAdapter = new ImageGridAdapter(this, handled);
         mRecyclerView.setAdapter(imageGridAdapter);
+        mProgressBar.setVisibility(View.GONE);
+        mRecyclerView.setVisibility(View.VISIBLE);
     }
 
     @Override
