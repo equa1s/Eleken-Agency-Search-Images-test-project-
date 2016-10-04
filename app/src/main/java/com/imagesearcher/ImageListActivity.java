@@ -77,9 +77,9 @@ public class ImageListActivity extends BaseActionBarActivity implements GoogleSe
         GoogleSearchController mGoogleSearchController = new GoogleSearchController(this);
 
         Map<String, String> options = new HashMap<>();
-        options.put("q", searchParam);
-        options.put("key", Constants.GOOGLE_API_KEY);
-        options.put("cx", Constants.ENGINE_ID);
+            options.put("q", searchParam);
+            options.put("key", Constants.GOOGLE_API_KEY);
+            options.put("cx", Constants.ENGINE_ID);
 
         mGoogleSearchController.getGoogleSearchResults(options);
     }
@@ -107,13 +107,13 @@ public class ImageListActivity extends BaseActionBarActivity implements GoogleSe
         List<String> handled = handleResponse(items);
         ImageGridAdapter imageGridAdapter = new ImageGridAdapter(this, handled);
         mRecyclerView.setAdapter(imageGridAdapter);
-        mProgressBar.setVisibility(View.GONE);
-        mRecyclerView.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onFinish() {
         Log.wtf(TAG, "Finished. ");
+        mProgressBar.setVisibility(View.GONE);
+        mRecyclerView.setVisibility(View.VISIBLE);
     }
 
     @Override

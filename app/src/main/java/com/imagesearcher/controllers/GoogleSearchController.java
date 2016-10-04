@@ -50,16 +50,16 @@ public class GoogleSearchController {
                     if (response.isSuccessful()) {
                         mGoogleSearchCallback.onSuccess(response.body());
                     }
+                    mGoogleSearchCallback.onFinish();
                 }
 
                 @Override
                 public void onFailure(Call<Items> call, Throwable t) {
                     mGoogleSearchCallback.onFailure(t);
+                    mGoogleSearchCallback.onFinish();
                 }
 
             });
-
-        mGoogleSearchCallback.onFinish();
 
     }
 
