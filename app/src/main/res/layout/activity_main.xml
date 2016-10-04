@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rows_count"
+        android:max="5"
+        android:padding="5dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"/>
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container_background"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TableRow android:padding="5dp">
+            <TextView
+                android:text="@string/rows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:id="@+id/row_count"
+                android:textSize="18sp"
+                android:gravity="center" />
+        </TableRow>
+        <TableRow android:padding="5dp">
+            <TextView
+                android:text="@string/search_param"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:id="@+id/search_params"
+                android:hint="@string/search"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:text="@string/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginEnd="33dp"
+        android:id="@+id/button_go"
+        android:layout_marginBottom="41dp"
+        android:layout_gravity="end" />
+
+</LinearLayout>

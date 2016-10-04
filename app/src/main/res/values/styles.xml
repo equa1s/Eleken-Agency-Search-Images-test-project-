@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="ImageSearcher.LightTheme.ActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ImageSearcher.LightTheme.NoActionBar" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/search_image_primary</item>
+        <item name="colorPrimaryDark">@color/search_image_primary_dark</item>
+        <item name="colorAccent">@color/search_image_accent</item>
+        <item name="background">@color/white</item>
+        <item name="elevation">2dp</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="ImageSearcher.LightTheme.ActionBar" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@color/search_image_primary</item>
+        <item name="colorPrimaryDark">@color/search_image_primary_dark</item>
+        <item name="colorAccent">@color/search_image_accent</item>
+        <item name="background">@color/white</item>
+        <item name="elevation">2dp</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+</resources>

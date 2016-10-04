@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Image Searcher</string>
+    <string name="go">Go!</string>
+    <string name="search_param">Search param:</string>
+    <string name="rows">Rows:</string>
+    <string name="search">Search…</string>
+    <string name="_0">0</string>
+    <string name="exception_network_failed">"Turn on internet, before do network tasks. "</string>
+</resources>
